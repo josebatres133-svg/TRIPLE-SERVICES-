@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triple Services - House Cleaning, Lawn Care and Junk Removal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#166534', 
+                        secondary: '#22c55e', 
+                        accent: '#facc15', 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-leaf text-primary text-3xl"></i>
+                        <span class="font-bold text-2xl text-gray-900">Triple<span class="text-primary">Services</span></span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-primary font-medium transition">About Us</a>
+                    <a href="#services" class="text-gray-600 hover:text-primary font-medium transition">Services</a>
+                    <a href="#reviews" class="text-gray-600 hover:text-primary font-medium transition">Reviews</a>
+                    <a href="#coverage" class="text-gray-600 hover:text-primary font-medium transition">Coverage Area</a>
+                    <a href="tel:+13362812302" class="bg-primary hover:bg-green-800 text-white px-6 py-2.5 rounded-full font-bold transition shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> +1.336-281-2302
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 shadow-lg absolute w-full">
+            <a href="#about" class="block px-4 py-3 text-gray-600 hover:bg-gray-50 font-medium border-b border-gray-50">About Us</a>
+            <a href="#services" class="block px-4 py-3 text-gray-600 hover:bg-gray-50 font-medium border-b border-gray-50">Services</a>
+            <a href="#reviews" class="block px-4 py-3 text-gray-600 hover:bg-gray-50 font-medium border-b border-gray-50">Reviews</a>
+            <a href="#coverage" class="block px-4 py-3 text-gray-600 hover:bg-gray-50 font-medium border-b border-gray-50">Coverage Area</a>
+            <a href="tel:+13362812302" class="block px-4 py-3 text-primary font-bold hover:bg-gray-50">
+                <i class="fa-solid fa-phone mr-2"></i> +1.336-281-2302
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero-bg h-screen min-h-[600px] flex items-center justify-center pt-20">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                House Cleaning, Lawn Care and Junk Removal
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                We make your life easier! Comprehensive services for a perfect space.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-primary hover:bg-green-700 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-lg">
+                    Request a booking
+                </a>
+                <a href="#services" class="bg-white hover:bg-gray-100 text-primary px-8 py-4 rounded-full font-bold text-lg transition shadow-lg">
+                    Explore our work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About us Triple Services</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-green-100 text-primary rounded-xl flex items-center justify-center mb-6 text-2xl">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                    <p class="text-gray-600 leading-relaxed text-justify">
+                        At Triple Services, we are committed to providing comprehensive solutions in house cleaning, lawn care, and junk removal, delivering reliable, efficient, and affordable services. Our mission is to enhance our clients' quality of life by keeping their homes and outdoor spaces clean, organized, and well-maintained. We work with professionalism, attention to detail, and an eco-friendly approach to ensure customer satisfaction in every service we provide.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 bg-green-100 text-primary rounded-xl flex items-center justify-center mb-6 text-2xl">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Team</h3>
+                    <p class="text-gray-600 leading-relaxed text-justify">
+                        At Triple Services, we have a highly skilled and dedicated team committed to providing top-quality house cleaning, lawn care, and junk removal services. Our staff is known for their professionalism, efficiency, and attention to detail, always ensuring outstanding results. We take pride in offering reliable and personalized service, tailoring our work to meet each client's needs. Whether you need a spotless home, a well-maintained yard, or fast and safe junk removal, our team is ready to assist with effective and high-quality solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    <strong>We make your life easier!</strong> With <strong>House Cleaning</strong>, we keep your home spotless. With <strong>Lawn Care</strong>, your yard stays green and vibrant. And with <strong>Junk Removal</strong>, we get rid of what you no longer need. Comprehensive services for a perfect space.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-16">
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 transition hover:-translate-y-1 hover:shadow-xl duration-300">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="House Cleaning" class="w-full h-48 object-cover">
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-broom text-primary text-2xl"></i>
+                            <h3 class="text-2xl font-bold text-gray-900">House Cleaning</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            <li><i class="fa-solid fa-check text-secondary mr-2"></i> Deep Cleaning</li>
+                            <li><i class="fa-solid fa-check text-secondary mr-2"></i> Standard Cleaning</li>
+                            <li><i class="fa-solid fa-check text-secondary mr-2"></i> Move-out Cleaning</li>
+                            <li><i class="fa-solid fa-check text-secondary mr-2"></i> Vacation Rental Cleaning</li>
+                        </ul>
+                        <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                            <h4 class="font-bold text-gray-900 text-sm mb-2">Extra Services:</h4>
+                            <p class="text-sm text-gray-600">Interior Windows Cleaning, Fridge Cleaning, Oven Cleaning, Baseboards Cleaning</p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-4">
+                            <h4 class="font-bold text-primary flex items-center gap-2"><i class="fa-regular fa-star"></i> Frequent services <i class="fa-regular fa-star"></i></h4>
+                            <p class="text-sm text-gray-600 mt-1">Weekly • Biweekly • Monthly</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 transition hover:-translate-y-1 hover:shadow-xl duration-300">
+                    <img src="https://images.unsplash.com/photo-1589050212879-c7096c466986?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Lawn Care" class="w-full h-48 object-cover">
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-leaf text-primary text-2xl"></i>
+                            <h3 class="text-2xl font-bold text-gray-900">Lawn Care</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            <li><i class="fa-solid fa-check text-secondary mr-2"></i> Mowing- Edging - Trimming</li>
+                            <li><i class="fa-solid fa-check text-secondary mr-2"></i> Maintenance</li>
+                            <li><i class="fa-solid fa-check text-secondary mr-2"></i> Leaf Removal</li>
+                            <li><i class="fa-solid fa-check text-secondary mr-2"></i> Bush Trimming</li>
+                        </ul>
+                        <div class="border-t border-gray-100 pt-4 mt-auto">
+                            <h4 class="font-bold text-primary flex items-center gap-2"><i class="fa-regular fa-star"></i> Frequent services <i class="fa-regular fa-star"></i></h4>
+                            <p class="text-sm text-gray-600 mt-1">Weekly • Biweekly • Monthly</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 transition hover:-translate-y-1 hover:shadow-xl duration-300">
+                    <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Junk Removal" class="w-full h-48 object-cover">
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-truck text-primary text-2xl"></i>
+                            <h3 class="text-2xl font-bold text-gray-900">Junk Removal</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-secondary mr-2 mt-1"></i> <span>Furniture, branches</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-secondary mr-2 mt-1"></i> <span>Miscellaneous Trash removal</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-secondary mr-2 mt-1"></i> <span>Cardboard</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-secondary mr-2 mt-1"></i> <span>Sofas, Mattresses, box Springs</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: REVIEWS -->
+    <section id="reviews" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Customer Reviews</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
+                <p class="text-gray-600">See what our clients in North Carolina are saying about us.</p>
+            </div>
+
+            <!-- Carrusel de Reviews (Scroll Horizontal) -->
+            <div class="flex overflow-x-auto gap-6 pb-8 snap-x hide-scroll">
+                
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Triple Services did an amazing job cleaning my house. Highly recommend!"</p>
+                    <p class="font-bold text-gray-900 text-sm">- Sarah M.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"My lawn has never looked better. Professional, efficient, and always on time."</p>
+                    <p class="font-bold text-gray-900 text-sm">- John D.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Fast junk removal, very affordable. They cleared my entire garage in an hour."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Emily R.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"I hired them for a move-out clean, and they left the place spotless. Got my full deposit back!"</p>
+                    <p class="font-bold text-gray-900 text-sm">- Michael T.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Great lawn maintenance team right here in Winston-Salem. Always reliable."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Jessica W.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"They took away all my old furniture in no time. Very polite and hardworking crew."</p>
+                    <p class="font-bold text-gray-900 text-sm">- David L.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"The deep cleaning service is worth every penny. My house smells amazing every time."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Amanda B.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Excellent edging and trimming. My front yard looks like a professional golf course."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Robert K.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Had a pile of construction debris and branches. Triple Services handled it easily without issues."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Lisa C.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"I use their standard cleaning on a biweekly basis. I love coming home on cleaning days!"</p>
+                    <p class="font-bold text-gray-900 text-sm">- James P.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Leaf removal was quick and thorough. Will definitely hire them again next fall."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Karen S.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Professional, friendly, and they get the job done right the first time. Zero complaints."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Mark H.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"They cleaned my vacation rental perfectly before the next guests arrived. Highly dependable."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Rachel G.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Trimmed my bushes and mowed the lawn. Very clean work and they took all the clippings."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Thomas F.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Got rid of an old mattress and box spring. Hassle-free experience from start to finish."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Nancy V.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Included baseboards and fridge cleaning in my service. Their attention to detail is superb."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Brian E.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Honestly, the best yard service I've used in the entire Forsyth County area."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Michelle O.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Very responsive to my messages, gave a fair quote, and showed up right on schedule."</p>
+                    <p class="font-bold text-gray-900 text-sm">- Steven W.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Cleared out a bunch of cardboard and miscellaneous trash from my move. Lifesavers!"</p>
+                    <p class="font-bold text-gray-900 text-sm">- Laura N.</p>
+                </div>
+
+                <div class="min-w-[300px] max-w-[300px] bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 snap-center">
+                    <div class="flex text-accent mb-3 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-600 mb-4 italic text-sm">"Trustworthy and hardworking team. 5 stars for house cleaning and overall service!"</p>
+                    <p class="font-bold text-gray-900 text-sm">- Kevin J.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Áreas de Cobertura -->
+    <section id="coverage" class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Counties Where We Provide Services</h2>
+                    <p class="text-green-100 text-lg mb-8 leading-relaxed">
+                        Winston-Salem is located in Forsyth County, North Carolina. Here are the counties within approximately 40 miles (64 kilometers) of Winston-Salem:
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <li class="bg-green-800/50 p-4 rounded-lg flex items-center gap-3">
+                            <i class="fa-solid fa-map-location-dot text-accent"></i> 
+                            <div><strong>Stokes County</strong><br><span class="text-sm text-green-200">North of Winston-Salem</span></div>
+                        </li>
+                        <li class="bg-green-800/50 p-4 rounded-lg flex items-center gap-3">
+                            <i class="fa-solid fa-map-location-dot text-accent"></i> 
+                            <div><strong>Guilford County</strong><br><span class="text-sm text-green-200">East of Winston-Salem</span></div>
+                        </li>
+                        <li class="bg-green-800/50 p-4 rounded-lg flex items-center gap-3">
+                            <i class="fa-solid fa-map-location-dot text-accent"></i> 
+                            <div><strong>Davidson County</strong><br><span class="text-sm text-green-200">South of Winston-Salem</span></div>
+                        </li>
+                        <li class="bg-green-800/50 p-4 rounded-lg flex items-center gap-3">
+                            <i class="fa-solid fa-map-location-dot text-accent"></i> 
+                            <div><strong>Davie County</strong><br><span class="text-sm text-green-200">Southwest of Winston-Salem</span></div>
+                        </li>
+                        <li class="bg-green-800/50 p-4 rounded-lg flex items-center gap-3">
+                            <i class="fa-solid fa-map-location-dot text-accent"></i> 
+                            <div><strong>Yadkin County</strong><br><span class="text-sm text-green-200">West of Winston-Salem</span></div>
+                        </li>
+                        <li class="bg-green-800/50 p-4 rounded-lg flex items-center gap-3">
+                            <i class="fa-solid fa-map-location-dot text-accent"></i> 
+                            <div><strong>Surry County</strong><br><span class="text-sm text-green-200">Northwest of Winston-Salem</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden md:flex justify-center">
+                    <div class="relative w-full max-w-md aspect-square bg-green-800 rounded-full flex items-center justify-center border-8 border-green-700/50 shadow-2xl">
+                        <i class="fa-solid fa-map-pin text-9xl text-accent opacity-90 drop-shadow-lg"></i>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-full h-full border border-green-600/30 rounded-full animate-ping opacity-20"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Contact us</h2>
+                    <p class="text-gray-600 mb-8">Request a booking or ask any questions.</p>
+                    
+                    <!-- ENLACE DE FORMSPREE INTEGRADO AQUÍ -->
+                    <form action="https://formspree.io/f/mreyalpw" method="POST" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico*</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Celphone Number</label>
+                                <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">I am interested in a service.</label>
+                                <select name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition bg-white">
+                                    <option>House Cleaning</option>
+                                    <option>Lawn Care</option>
+                                    <option>Junk Removal</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- NUEVO CAMPO DE DESCRIPCIÓN AÑADIDO -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Tell us more details (Optional)</label>
+                            <textarea name="message" rows="4" placeholder="Example: I need to remove a 3-seater sofa and some branches..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none"></textarea>
+                        </div>
+                        
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-primary hover:bg-green-800 text-white font-bold py-4 px-8 rounded-lg transition shadow-md flex justify-center items-center gap-2">
+                                Send <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-4 text-center">
+                            This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+                        </p>
+                    </form>
+                </div>
+
+                <div class="bg-gray-50 p-8 md:p-12 rounded-2xl border border-gray-100 h-fit">
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-2">Business Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <i class="fa-solid fa-location-dot text-primary mt-1 text-xl"></i>
+                                <div>
+                                    <p class="font-bold text-gray-900">Triple Services</p>
+                                    <p class="text-gray-600">Winston-Salem, Carolina del Norte, EE. UU.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fa-solid fa-phone text-primary text-xl"></i>
+                                <a href="tel:+13362812302" class="text-lg font-bold text-primary hover:underline">+1.336-281-2302</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-2">Schedule</h3>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between text-gray-600"><span class="font-medium text-gray-800">Mon</span> <span>08:00 am – 06:00 pm</span></li>
+                            <li class="flex justify-between text-gray-600"><span class="font-medium text-gray-800">Tue</span> <span>08:00 am – 06:00 pm</span></li>
+                            <li class="flex justify-between text-gray-600"><span class="font-medium text-gray-800">Wed</span> <span>08:00 am – 06:00 pm</span></li>
+                            <li class="flex justify-between text-gray-600"><span class="font-medium text-gray-800">Thu</span> <span>08:00 am – 06:00 pm</span></li>
+                            <li class="flex justify-between text-gray-600"><span class="font-medium text-gray-800">Fri</span> <span>08:00 am – 06:00 pm</span></li>
+                            <li class="flex justify-between text-gray-600"><span class="font-medium text-gray-800">Sat</span> <span>09:00 am – 06:00 pm</span></li>
+                            <li class="flex justify-between text-gray-600"><span class="font-medium text-gray-800">Sun</span> <span>09:00 am – 06:00 pm</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 border-b border-gray-800 pb-8 gap-6">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-primary text-3xl"></i>
+                    <span class="font-bold text-2xl">Triple<span class="text-primary">Services</span></span>
+                </div>
+                
+                <!-- ENLACE DE FORMSPREE INTEGRADO AQUÍ TAMBIÉN -->
+                <form action="https://formspree.io/f/mreyalpw" method="POST" class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <input type="email" name="email" required placeholder="Email (To subscribe)" class="px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-primary">
+                    <button type="submit" class="bg-primary hover:bg-green-700 px-6 py-2 rounded-lg font-bold transition">To register</button>
+                </form>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm gap-4 text-center md:text-left">
+                <p>Copyright &copy; 2026 Triple Services - all rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition text-xl"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-white transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
+
